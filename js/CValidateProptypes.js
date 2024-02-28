@@ -3,8 +3,8 @@ import CErrorTypes from "./CErrorTypes.js";
 
 //PROTOTYPES
 //lENGUAJE DE Idioma
-var LNG = 1;
-const LANGUAGE = (LNG === 2)? 'ENG':'ES';
+var LNG_ES_ENG = 1;
+const LANGUAGE = (LNG_ES_ENG === 2)? 'ENG':'ES';
 
 export default class CValidateProptypes{
     static string(prop, propName, functionName) {

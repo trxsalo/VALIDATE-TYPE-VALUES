@@ -1,4 +1,5 @@
-import CTraslation from './CTraslation';
+import {describe,it,expect} from "vitest";
+import CTraslation from '../language/CTraslation.js';
 
 // Definimos algunas traducciones de prueba
 const langEn = {

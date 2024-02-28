@@ -5,11 +5,11 @@
   "description": "Validacion de los tipos de parametros",
   "main": "CProtypes.js",
   "directories": {
-    "test": "test",
-    "coverage": "vitest run --coverage"
+    "test": "test"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
