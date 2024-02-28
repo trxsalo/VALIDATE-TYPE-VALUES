@@ -1,5 +1,5 @@
 
-const langEs = {
+export const langEs = {
     //Message de Errors
     "Error":"Error",
     "ErrElement": "Elemento no encontrado",

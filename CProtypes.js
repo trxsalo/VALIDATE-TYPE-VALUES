@@ -1,10 +1,18 @@
 
+import CValidateProptypes from "./js/CValidateProptypes.js";
+
 // Validacion de los datos de cada parametro
 
-class CProtypes {
-    static VALIDATE(funct) {
-        const { name, prototype, arguments:args } = funct;
-        const arg = (args.length === 1) ? args[0] : args;
+export class CProtypes {
+    /**
+     *
+     * @param funct
+     * @param params los valores enviados en los parametros
+     * @constructor
+     */
+    static VALIDATE(funct,params) {
+        const { name, prototype } = funct;
+        const arg = (params.length === 1) ? params[0] : params;
         this.VerificarProptypes(name, prototype, arg);
     }
 
@@ -35,4 +43,12 @@ class CProtypes {
     }
 }
 
+
+export const PropTypes = {
+    string: ()=>  'string',
+    boolean: ()=> 'boolean',
+    number: ()=> 'number',
+    object: ()=> 'object',
+    undefined: ()=> 'undefined',
+}
 

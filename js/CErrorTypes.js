@@ -1,8 +1,7 @@
 
-class ErrorTypes extends Error {
-    constructor(statusCode, message, propName,propValue, functionName) {
+export default class CErrorTypes extends Error {
+    constructor(message, propName,propValue, functionName) {
         super(message);
-        this.statusCode = statusCode;
         this.propName = propName;
         this.functionName = functionName;
         this.propValue = propValue
@@ -12,11 +11,10 @@ class ErrorTypes extends Error {
 
     #getNameNew(){
         const mess = `
-            Code: ${this.statusCode}
             Function: ${this.functionName}
             Variable: ${this.propName}
-            Valor recivido: ${this.propValue}
-            Valor Type: ${typeof this.propValue}
+            Value received: ${this.propValue}
+            Value Type: ${typeof this.propValue}
             ${this.name}`;
         return mess
     }

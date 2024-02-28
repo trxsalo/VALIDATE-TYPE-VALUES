@@ -1,5 +1,5 @@
 
-const langEn = {
+export  const langEn = {
     "Error": "Error",
     "ErrElement": "Element not found",
     "ErrUndefine": "Element is not defined",

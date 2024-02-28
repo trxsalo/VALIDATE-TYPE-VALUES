@@ -1,0 +1,32 @@
+{
+  "name": "validate-type",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Validacion de los tipos de parametros",
+  "main": "CProtypes.js",
+  "directories": {
+    "test": "test",
+    "coverage": "vitest run --coverage"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trxsalo/VALIDATE-TYPE-VALUES.git"
+  },
+  "keywords": [
+    "vainillajs",
+    "js"
+  ],
+  "author": "trxsalo",
+  "license": "ISC",
+  "strict": true,
+  "bugs": {
+    "url": "https://github.com/trxsalo/VALIDATE-TYPE-VALUES/issues"
+  },
+  "homepage": "https://github.com/trxsalo/VALIDATE-TYPE-VALUES#readme",
+  "devDependencies": {
+    "vitest": "^1.3.1"
+  }
+}

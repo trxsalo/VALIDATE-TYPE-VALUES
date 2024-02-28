@@ -1,17 +1,19 @@
+import CTraslation from "../language/CTraslation.js";
+import CErrorTypes from "./CErrorTypes.js";
 
 //PROTOTYPES
 //lENGUAJE DE Idioma
-const LNG = 1;
+var LNG = 1;
 const LANGUAGE = (LNG === 2)? 'ENG':'ES';
 
-class CValidateProptypes{
+export default class CValidateProptypes{
     static string(prop, propName, functionName) {
         if (typeof prop !== 'string') {
             const err = {
                 key : 'ErrorString',
                 lang: LANGUAGE
             };
-            throw new ErrorTypes(400, f_traslate(err), propName, prop, functionName);
+            throw new CErrorTypes(CTraslation.traslate(err), propName, prop, functionName);
         }
     }
 
@@ -21,7 +23,7 @@ class CValidateProptypes{
                 key : 'ErrorNumber',
                 lang: LANGUAGE
             };
-            throw new ErrorTypes(400, f_traslate(err), propName, prop, functionName);
+            throw new CErrorTypes(CTraslation.traslate(err), propName, prop, functionName);
         }
     }
 
@@ -31,7 +33,7 @@ class CValidateProptypes{
                 key : 'ErrorBoolean',
                 lang: LANGUAGE
             };
-            throw new ErrorTypes(400, f_traslate(err), propName, prop, functionName);
+            throw new CErrorTypes(CTraslation.traslate(err), propName, prop, functionName);
         }
     }
 
@@ -41,15 +43,7 @@ class CValidateProptypes{
                 key : 'ErrorObject',
                 lang: LANGUAGE
             };
-            throw new ErrorTypes(400, f_traslate(err), propName, prop, functionName);
+            throw new CErrorTypes(CTraslation.traslate(err), propName, prop, functionName);
         }
     }
-}
-
-const PropTypes = {
-    string: ()=>  'string',
-    boolean: ()=> 'boolean',
-    number: ()=> 'number',
-    object: ()=> 'object',
-    undefined: ()=> 'undefined',
 }
